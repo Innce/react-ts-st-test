@@ -1,0 +1,34 @@
+<Meta title="Example/Test Task"/>
+
+# Test task
+
+Below you will see a test task instructions that you need to complete step by step.
+The meaning of the test problem is to understand how quickly you will master the Storybook and implement the code in TS. Аlso test your knowledge about react
+
+## Create a simple "Table Component" for posts
+
+Table should contain `ID`, `Title`, `Description` and `Actions` columns.
+Columns you need take from component props (`posts={...}`).
+For your table you can use data:
+```sh
+[
+  {id: '#1254', title: 'News 15.08.2021', description: 'Some test description 1'},
+  {id: '#1255', title: 'News 17.08.2021', description: 'Some test description 2'},
+  {id: '#1256', title: 'News 20.08.2021', description: 'Some test description 3'}
+]
+```
+
+Each post item should have `Copy` and `Remove` buttons under actions columns,
+"Table componnent" Should have `onChange={...}` prop witch one will be trigerrend on every item removal or copiing and return changed array of ALL posts.
+State for posts array should be saved in `stories.tsx` file.
+When you click on `Copy` button you need to add copy of that post below and generate unique id for it
+
+## Add form to be able to create a new Posts
+
+For post creation you need to have 2 inputs: `title` and `description`. `id` should be generated. After form submit you need to trigger `onChange` prop.
+
+## Add new prop for "Table Component" to disable actions
+
+You need to add a new prop `porle` and it can take only 2 values 
+`role="admin"` or `role="viewer"`. If role is viewer you need to hide table `Actions` column.
+You need to be able to change `role` by Storybook `Controls`
